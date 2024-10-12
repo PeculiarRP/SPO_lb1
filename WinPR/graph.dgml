@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+ <Nodes>
+	<Node Id="1" Label="SOURCE"/>
+	<Node Id="11" Label="SOURCEITEM"/>
+	<Node Id="111" Label="FUNCDEF"/>
+	<Node Id="1111" Label="def"/>
+	<Node Id="1111" Label="FUNCSIGNATURE"/>
+	<Node Id="11111" Label="aa"/>
+	<Node Id="11111" Label="("/>
+	<Node Id="11111" Label="aa"/>
+	<Node Id="11111" Label="of"/>
+	<Node Id="11111" Label="bool"/>
+	<Node Id="11111" Label=")"/>
+	<Node Id="1111" Label="if"/>
+	<Node Id="1111" Label="EXPR"/>
+	<Node Id="11111" Label="+"/>
+	<Node Id="111111" Label="5"/>
+	<Node Id="111111" Label="5"/>
+	<Node Id="1111" Label="then"/>
+	<Node Id="1111" Label="{"/>
+	<Node Id="1111" Label="EXPR"/>
+	<Node Id="1111" Label="while"/>
+	<Node Id="11111" Label="=="/>
+	<Node Id="111111" Label="5"/>
+	<Node Id="111111" Label="5"/>
+	<Node Id="1111" Label="{"/>
+	<Node Id="1111" Label="EXPRESSION"/>
+	<Node Id="11111" Label="EXPR"/>
+	<Node Id="111111" Label="="/>
+	<Node Id="1111111" Label="a"/>
+	<Node Id="1111111" Label="5"/>
+	<Node Id="11111" Label=";"/>
+	<Node Id="1111" Label="}"/>
+	<Node Id="1111" Label="end"/>
+	<Node Id="1111" Label="}"/>
+	<Node Id="1111" Label="end"/>
+ </Nodes>
+<Links>
+	<Link Source="111" Target="1111"/>
+
+	<Link Source="1111" Target="11111"/>
+
+	<Link Source="1111" Target="11111"/>
+
+	<Link Source="1111" Target="11111"/>
+
+	<Link Source="1111" Target="11111"/>
+
+	<Link Source="1111" Target="11111"/>
+
+	<Link Source="1111" Target="11111"/>
+	<Link Source="111" Target="1111"/>
+	<Link Source="111" Target="1111"/>
+
+	<Link Source="11111" Target="111111"/>
+
+	<Link Source="11111" Target="111111"/>
+	<Link Source="1111" Target="11111"/>
+	<Link Source="111" Target="1111"/>
+
+	<Link Source="111" Target="1111"/>
+
+	<Link Source="111" Target="1111"/>
+
+	<Link Source="111" Target="1111"/>
+
+	<Link Source="11111" Target="111111"/>
+
+	<Link Source="11111" Target="111111"/>
+	<Link Source="1111" Target="11111"/>
+	<Link Source="111" Target="1111"/>
+
+	<Link Source="111" Target="1111"/>
+
+	<Link Source="111111" Target="1111111"/>
+
+	<Link Source="111111" Target="1111111"/>
+	<Link Source="11111" Target="111111"/>
+	<Link Source="1111" Target="11111"/>
+
+	<Link Source="1111" Target="11111"/>
+	<Link Source="111" Target="1111"/>
+
+	<Link Source="111" Target="1111"/>
+
+	<Link Source="111" Target="1111"/>
+
+	<Link Source="111" Target="1111"/>
+
+	<Link Source="111" Target="1111"/>
+	<Link Source="11" Target="111"/>
+	<Link Source="1" Target="11"/>
+</Links>
+</DirectedGraph>

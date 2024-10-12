@@ -1,0 +1,7 @@
+def aa (aa of bool) if 5+5 then
+{
+  while 5 == 5 {
+    a = 5;
+  } end
+} 
+end
