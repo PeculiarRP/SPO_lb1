@@ -27,6 +27,9 @@
     <ClCompile Include="..\LB1Linux\TreeGenerator.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="..\LB1Linux\CFG.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\LB1Linux\ANTLR\MyGramLexer.h">
@@ -38,11 +41,15 @@
     <ClInclude Include="..\LB1Linux\TreeGenerator.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="..\LB1Linux\CFG.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Test.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Test.dgml" />
+    <None Include="tmp.dgml" />
   </ItemGroup>
 </Project>

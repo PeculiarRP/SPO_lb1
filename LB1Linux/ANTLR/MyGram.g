@@ -20,12 +20,15 @@ tokens{
 	STATEMENT;
 	BUILTIN;
 	CUSTOM;
-	BLOCK;
+	BLOCKSTATEMENT;
 	BREAKSTATEMENT;
 	LOOPSTATEMENT;
 	IFSTATEMENT;
+	REPEATSTATEMENT;
+	IDEN;
+	ARG;
 	ST;
-	EXPRESSION;
+	EXPSTATEMENT;
 	EXPR;
 	CALLEXPR;
 	SLICEEXPR;
@@ -38,12 +41,12 @@ tokens{
 
 source	: sourceItem* -> ^(SOURCE sourceItem*);
 sourceItem: funcDef -> ^(SOURCEITEM funcDef);
-funcDef: 'def' funcSignature statement* 'end' -> ^(FUNCDEF 'def' funcSignature statement* 'end');
+funcDef: 'def' funcSignature statement* 'end' -> ^(FUNCDEF funcSignature statement*);
 funcSignature
-    : IDENTIFIER LPAREN listArg? RPAREN endTypeSpec? -> ^(FUNCSIGNATURE IDENTIFIER LPAREN listArg? RPAREN endTypeSpec?)
+    : custom LPAREN listArg? RPAREN endTypeSpec? -> ^(FUNCSIGNATURE custom listArg? endTypeSpec?)
     ;
-listArg	: argSpec (COMMA argSpec)* -> ^(LISTARG argSpec (COMMA argSpec)*);
-argSpec: IDENTIFIER endTypeSpec?;
+listArg	: argSpec (COMMA argSpec)* -> ^(LISTARG argSpec (argSpec)*);
+argSpec: custom endTypeSpec? -> ^(ARG custom endTypeSpec?);
 endTypeSpec
 	: 'of' typeRef -> ^(TYPEREF typeRef);
 typeRef
@@ -57,21 +60,25 @@ statement
 	: ( ifStatement -> ^(STATEMENT ^(IFSTATEMENT ifStatement) repeat?)
 	| loopStatement -> ^(STATEMENT ^(LOOPSTATEMENT loopStatement repeat?))
 	| breakStatement -> ^(STATEMENT ^(BREAKSTATEMENT breakStatement repeat?))
-	| expression -> ^(STATEMENT ^(EXPRESSION expression repeat?))
-	| block -> ^(STATEMENT ^(BLOCK block) repeat?)) repeat?;
+	| expression -> ^(STATEMENT ^(EXPSTATEMENT expression repeat?))
+	| block -> ^(STATEMENT ^(BLOCKSTATEMENT block) repeat?)) repeat?;
 
-custom: IDENTIFIER -> ^(IDENTIFIER);
-array: baseRef (arraySpec)*;
-arraySpec: 'array' '[' DEC ']'  -> ^(ARRAY 'array' '[' DEC ']');
+custom: IDENTIFIER -> ^(IDEN IDENTIFIER);
+array: baseRef arraySpec?;
+arraySpec: 
+	'array' '[' DEC ']' arraySpec -> ^(ARRAY arraySpec DEC) 
+	| 'array' '[' DEC ']'  -> ^(ARRAY DEC);
 
 ifStatement: 'if' expr 'then' statement (elseClause)?;
 elseClause: 'else' statement;
 loopStatement: loopHeader statement* 'end';
-loopHeader: ('while'|'until') expr; 
-repeat: ('while'|'until') expr EndChar;
+loopHeader: loopWhile expr -> expr; 
+repeat: loopWhile expr EndChar -> ^(REPEATSTATEMENT expr EndChar);
+loopWhile: 'while' | loopUntil;
+loopUntil: 'until';
 breakStatement: 'break' EndChar;
 expression: expr EndChar;
-block: ('begin'|'{') (blockParam)* ('end'|'}');
+block: ('begin'|'{') (blockParam)* ('end'|'}') -> blockParam*;
 blockParam
 	: statement | funcDef;
 expr: assigmentExpression -> ^(EXPR assigmentExpression);
@@ -132,19 +139,21 @@ callExpr: place '(' (assigmentExpression (',' assigmentExpression)*)? ')' -> ^(C
 sliceExpr: place  '[' (assigmentExpression exprRange (exprRangeList)*)? ']' -> ^(SLICEEXPR place assigmentExpression? exprRange? exprRangeList*);
 exprRangeList: (',' assigmentExpression exprRange?);
 exprRange: '..' assigmentExpression;
-place: IDENTIFIER;
+place: IDENTIFIER -> ^(IDEN IDENTIFIER);
 
 ASSIGNEQUAL: '=';
 PLAS: '+';
 MINUS: '-';
 EndChar: ';';
 LPAREN  : '(' ;
-RPAREN  : ')' ;
+RPAREN  : ')' ; 
 COMMA: ',';
 ELSEW: 'else';
 
 BOOL_LITERAL: 'true'|'false';
+
 IDENTIFIER  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
+
 CHAR:  '\'' ( ~('\'') ) '\'';
 STR:  '"' ~('\\'|'"') | ('?'':''\\''.'~('\\'|'"')*)* '"';
 
@@ -166,7 +175,7 @@ literalStr: STR | literalBool_lit;
 literalBool_lit: BOOL_LITERAL | literalBits;
 literalBits: BITS;
 
-builtinInt: 'INT' | builtinChar;
+builtinInt: 'int' | builtinChar;
 builtinChar: 'char' | builtinBool;
 builtinBool: 'bool' | builtinByte;
 builtinByte: 'byte' | builtinUint;

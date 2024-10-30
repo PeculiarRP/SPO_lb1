@@ -137,12 +137,14 @@
   <ItemGroup>
     <ClCompile Include="..\LB1Linux\ANTLR\MyGramLexer.c" />
     <ClCompile Include="..\LB1Linux\ANTLR\MyGramParser.c" />
+    <ClCompile Include="..\LB1Linux\CFG.c" />
     <ClCompile Include="..\LB1Linux\Main.c" />
     <ClCompile Include="..\LB1Linux\TreeGenerator.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\LB1Linux\ANTLR\MyGramLexer.h" />
     <ClInclude Include="..\LB1Linux\ANTLR\MyGramParser.h" />
+    <ClInclude Include="..\LB1Linux\CFG.h" />
     <ClInclude Include="..\LB1Linux\TreeGenerator.h" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Test.dgml" />
+    <None Include="tmp.dgml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

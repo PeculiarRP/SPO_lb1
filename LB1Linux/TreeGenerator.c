@@ -21,9 +21,8 @@ TreeNode* createTreeNode(TreeNode* node, char* value, int type, int count) {
     node->children = NULL;
     if (count != 0) {
         node->children = (TreeNode**)malloc(count * sizeof(TreeNode*));
-        //node->children = NULL;
         for (int i = 0; i < count; i++) {
-            node->children[i] = malloc(count * sizeof(TreeNode));
+            node->children[i] = malloc(sizeof(TreeNode));
         }
     }
     node->countChildren = count;
@@ -36,8 +35,9 @@ TreeNode* createTree(pANTLR3_BASE_TREE root, TreeNode* node) {
     }
     
     node = createTreeNode(node, root->getText(root)->chars, root->getType(root), root->getChildCount(root));
-    int count = root->getChildCount(root);
-    for (int i = 0; i < count; i++) {
+    
+    
+    for (int i = 0; i < root->getChildCount(root); i++) {
         pANTLR3_BASE_TREE child = root->getChild(root, i);
         node->children[i] = createTree(child, node->children[i]);
     }
@@ -134,21 +134,10 @@ OutStruct* treeGeneration(char* inputFile) {
 
     MyGramParser_source_return progReturn = parser->source(parser);
 
-    /*if (parser->pParser->rec->state->errorCount > 0) {
-        
-        for (int i = 0; i < parser->pParser->rec->state->errorCount; i++) {
-            char* name = parser->pParser->rec->state->exception->name;
-
-        }
-
-        fprintf(stderr, "Parsing finished with errors.\n");
-    }*/
-    //else {
     pANTLR3_BASE_TREE tree = progReturn.tree;
     out->root = createTree(tree, NULL);
     out->er = errors;
     out->erCount = erCount;
-    //}
 
     parser->free(parser);
     tokens->free(tokens);
