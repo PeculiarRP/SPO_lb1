@@ -232,3 +232,4 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+/LB1Linux/ANTLR/antlr-3.5.2-complete.jar
