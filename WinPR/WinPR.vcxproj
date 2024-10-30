@@ -130,11 +130,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="..\C\C.vcxproj">
-      <Project>{0f0fe03a-78f3-4b34-9dce-0cdff1fb5c40}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\LB1Linux\ANTLR\MyGramLexer.c" />
     <ClCompile Include="..\LB1Linux\ANTLR\MyGramParser.c" />
     <ClCompile Include="..\LB1Linux\CFG.c" />
@@ -153,6 +148,11 @@
   <ItemGroup>
     <None Include="Test.dgml" />
     <None Include="tmp.dgml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\C\C.vcxproj">
+      <Project>{0f0fe03a-78f3-4b34-9dce-0cdff1fb5c40}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

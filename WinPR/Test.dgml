@@ -1,98 +1,94 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
-  <Nodes>
-    <Node Id="-1268756875" Bounds="612.74,727.48,50,25.96" Label="21: ;" />
-    <Node Id="-1268756876" Bounds="516.805,727.48,65.87,25.96" Label="19: EXPR" />
-    <Node Id="-1268756975" Bounds="436.74,727.48,50,25.96" Label="21: ;" />
-    <Node Id="-1268756976" Bounds="337.54,727.48,68.4,25.96" Label="65: break" />
-    <Node Id="-1741523680" Bounds="436.74,895.360000000001,50,25.96" Label="27: a" />
-    <Node Id="1" Bounds="242.241666666667,0,82.9966666666667,25.96" Label="37: SOURCE" />
-    <Node Id="10" Bounds="229.078333333333,55.96,109.323333333333,25.96" Label="38: SOURCEITEM" />
-    <Node Id="100" Bounds="238.9,111.92,89.6800000000001,25.96" Label="22: FUNCDEF" />
-    <Node Id="1000" Bounds="71.355,167.88,130.77,25.96" Label="23: FUNCSIGNATURE" />
-    <Node Id="10000" Bounds="0,223.84,65.48,25.96" Label="26: IDEN" />
-    <Node Id="100000" Bounds="7.22000000000003,279.8,51.04,25.96" Label="27: aa" />
-    <Node Id="10001" Bounds="95.495,223.84,82.49,25.96" Label="29: LISTARG" />
-    <Node Id="100010" Bounds="89.0716666666667,279.8,55.3366666666667,25.96" Label="4: ARG" />
-    <Node Id="1000100" Bounds="53,335.76,65.48,25.96" Label="26: IDEN" />
-    <Node Id="10001000" Bounds="60.22,391.72,51.04,25.96" Label="27: aa" />
-    <Node Id="1000101" Bounds="148.801666666667,335.76,83.8766666666667,25.96" Label="42: TYPEREF" />
-    <Node Id="10001010" Bounds="150.526666666667,391.72,80.4266666666667,25.96" Label="12: BUILTIN" />
-    <Node Id="100010100" Bounds="159.316666666667,447.68,62.8466666666667,25.96" Label="64: bool" />
-    <Node Id="1001" Bounds="232.733333333333,167.88,102.013333333333,25.96" Label="40: STATEMENT" />
-    <Node Id="10010" Bounds="232.206666666667,223.84,111.066666666667,25.96" Label="28: IFSTATEMENT" />
-    <Node Id="100100" Bounds="174.74,279.8,50,25.96" Label="70: if" />
-    <Node Id="100101" Bounds="254.805,279.8,65.87,25.96" Label="19: EXPR" />
-    <Node Id="1001010" Bounds="262.74,335.76,50,25.96" Label="33: +" />
-    <Node Id="10010100" Bounds="262.74,391.72,50,25.96" Label="17: 5" />
-    <Node Id="10010101" Bounds="343.74,391.72,50,25.96" Label="17: 5" />
-    <Node Id="100102" Bounds="351.365,279.8,62.75,25.96" Label="75: then" />
-    <Node Id="100103" Bounds="444.733333333333,279.8,102.013333333333,25.96" Label="40: STATEMENT" />
-    <Node Id="1001030" Bounds="430.191666666667,335.76,131.096666666667,25.96" Label="9: BLOCKSTATEMENT" />
-    <Node Id="10010300" Bounds="444.733333333333,391.72,102.013333333333,25.96" Label="40: STATEMENT" />
-    <Node Id="100103000" Bounds="429.708333333333,447.68,132.063333333333,25.96" Label="30: LOOPSTATEMENT" />
-    <Node Id="1001030000" Bounds="348.805,503.64,65.87,25.96" Label="19: EXPR" />
-    <Node Id="1001030001" Bounds="444.733333333333,503.64,102.013333333333,25.96" Label="40: STATEMENT" />
-    <Node Id="1001030002" Bounds="577.26,503.64,58.96,25.96" Label="69: end" />
-    <Node Id="1318752192" Bounds="275.74,615.56,50,25.96" Label="17: 5" />
-    <Node Id="1318752193" Bounds="356.74,615.56,50,25.96" Label="17: 5" />
-    <Node Id="1318752292" Bounds="437.733333333333,615.56,102.013333333333,25.96" Label="40: STATEMENT" />
-    <Node Id="1318752293" Bounds="570.733333333333,615.56,102.013333333333,25.96" Label="40: STATEMENT" />
-    <Node Id="1420365408" Bounds="354.116666666667,559.6,55.2466666666667,25.96" Label="55: ==" />
-    <Node Id="1420365418" Bounds="440.191666666667,559.6,131.096666666667,25.96" Label="9: BLOCKSTATEMENT" />
-    <Node Id="197333128" Bounds="524.74,783.440000000001,50,25.96" Label="7: =" />
-    <Node Id="1973331280" Bounds="429,839.400000000001,65.48,25.96" Label="26: IDEN" />
-    <Node Id="1973331281" Bounds="524.74,839.400000000001,50,25.96" Label="17: 5" />
-    <Node Id="302621032" Bounds="393.32,671.52,136.84,25.96" Label="11: BREAKSTATEMENT" />
-    <Node Id="302621042" Bounds="560.8,671.52,121.88,25.96" Label="20: EXPSTATEMENT" />
-  </Nodes>
-  <Links>
-    <Link Source="-1268756876" Target="197333128" Bounds="549.739990234375,753.440002441406,0,21" />
-    <Link Source="1" Target="10" Bounds="283.739990234375,25.9599990844727,0,21" />
-    <Link Source="10" Target="100" Bounds="283.739990234375,81.9199981689453,0,21" />
-    <Link Source="100" Target="1000" Bounds="179.248001098633,137.880004882813,70.3951416015625,26.7980346679688" />
-    <Link Source="100" Target="1001" Bounds="283.739990234375,137.880004882813,0,21" />
-    <Link Source="1000" Target="10000" Bounds="64.788459777832,193.839996337891,47.8285980224609,25.7354736328125" />
-    <Link Source="1000" Target="10001" Bounds="136.740005493164,193.839996337891,0,21" />
-    <Link Source="10000" Target="100000" Bounds="32.7400016784668,249.800003051758,0,20.9999847412109" />
-    <Link Source="10001" Target="100010" Bounds="124.407974243164,249.800003051758,7.6929931640625,21.5250091552734" />
-    <Link Source="100010" Target="1000100" Bounds="97.2917175292969,305.760009765625,12.2577896118164,22.1272583007813" />
-    <Link Source="100010" Target="1000101" Bounds="133.904403686523,305.760009765625,32.49267578125,24.5714721679688" />
-    <Link Source="1000100" Target="10001000" Bounds="85.7399978637695,361.720001220703,0,21" />
-    <Link Source="1000101" Target="10001010" Bounds="190.740005493164,361.720001220703,0,21" />
-    <Link Source="10001010" Target="100010100" Bounds="190.740005493164,417.679992675781,0,21" />
-    <Link Source="1001" Target="10010" Bounds="284.667816162109,193.839996337891,1.502685546875,21.0229034423828" />
-    <Link Source="10010" Target="100100" Bounds="227.746246337891,249.800003051758,39.58203125,25.1705780029297" />
-    <Link Source="10010" Target="100101" Bounds="287.739990234375,249.800003051758,0,20.9999847412109" />
-    <Link Source="10010" Target="100102" Bounds="309.775390625,249.800003051758,43.1745910644531,25.4321136474609" />
-    <Link Source="10010" Target="100103" Bounds="335.985900878906,249.800003051758,102.845001220703,27.6692657470703" />
-    <Link Source="100101" Target="1001010" Bounds="287.739990234375,305.760009765625,0,21" />
-    <Link Source="1001010" Target="10010100" Bounds="287.739990234375,361.720001220703,0,21" />
-    <Link Source="1001010" Target="10010101" Bounds="306.528076171875,361.720001220703,36.0191345214844,24.8843383789063" />
-    <Link Source="100103" Target="1001030" Bounds="495.739990234375,305.760009765625,0,21" />
-    <Link Source="1001030" Target="10010300" Bounds="495.739990234375,361.720001220703,0,21" />
-    <Link Source="10010300" Target="100103000" Bounds="495.739990234375,417.679992675781,0,21" />
-    <Link Source="100103000" Target="1001030000" Bounds="416.261566162109,473.640014648438,53.0359802246094,26.0341491699219" />
-    <Link Source="100103000" Target="1001030001" Bounds="495.739990234375,473.640014648438,0,21" />
-    <Link Source="100103000" Target="1001030002" Bounds="521.486633300781,473.640014648438,51.4702758789063,25.9484558105469" />
-    <Link Source="1001030000" Target="1420365408" Bounds="381.739990234375,529.599975585938,0,21" />
-    <Link Source="1001030001" Target="1420365418" Bounds="498.059509277344,529.599975585938,3.77777099609375,21.140380859375" />
-    <Link Source="1318752292" Target="302621032" Bounds="471.913635253906,641.52001953125,10.5636901855469,21.8941650390625" />
-    <Link Source="1318752293" Target="302621042" Bounds="621.739990234375,641.52001953125,0,21" />
-    <Link Source="1420365408" Target="1318752192" Bounds="326.932800292969,585.559997558594,36.0191345214844,24.8843383789063" />
-    <Link Source="1420365408" Target="1318752193" Bounds="381.739990234375,585.559997558594,0,21" />
-    <Link Source="1420365418" Target="1318752292" Bounds="495.299224853516,585.559997558594,6.49758911132813,21.3886108398438" />
-    <Link Source="1420365418" Target="1318752293" Bounds="532.646362304688,585.559997558594,54.0812377929688,26.0895385742188" />
-    <Link Source="197333128" Target="1973331280" Bounds="489.746246337891,809.400024414063,39.5820007324219,25.1705322265625" />
-    <Link Source="197333128" Target="1973331281" Bounds="549.739990234375,809.400024414063,0,21" />
-    <Link Source="1973331280" Target="-1741523680" Bounds="461.739990234375,865.359985351563,0,21" />
-    <Link Source="302621032" Target="-1268756975" Bounds="461.739990234375,697.47998046875,0,21" />
-    <Link Source="302621032" Target="-1268756976" Bounds="400.258666992188,697.47998046875,40.605712890625,25.2477416992188" />
-    <Link Source="302621042" Target="-1268756875" Bounds="625.451232910156,697.47998046875,6.1033935546875,21.3467407226563" />
-    <Link Source="302621042" Target="-1268756876" Bounds="573.546569824219,697.47998046875,31.492919921875,24.4769897460938" />
-  </Links>
-  <Properties>
-    <Property Id="Bounds" DataType="System.Windows.Rect" />
-    <Property Id="Label" Label="Метка" Description="Отображаемая метка аннотируемого объекта" DataType="System.String" />
-  </Properties>
+<Nodes>
+<Node Id="1" Label="37: SOURCE"/>
+<Node Id="10" Label="38: SOURCEITEM"/>
+<Node Id="100" Label="22: FUNCDEF"/>
+<Node Id="1000" Label="23: FUNCSIGNATURE"/>
+<Node Id="10000" Label="26: IDEN"/>
+<Node Id="100000" Label="27: aa"/>
+<Node Id="10001" Label="29: LISTARG"/>
+<Node Id="100010" Label="4: ARG"/>
+<Node Id="1000100" Label="26: IDEN"/>
+<Node Id="10001000" Label="27: aa"/>
+<Node Id="1000101" Label="42: TYPEREF"/>
+<Node Id="10001010" Label="12: BUILTIN"/>
+<Node Id="100010100" Label="64: bool"/>
+<Node Id="1001" Label="40: STATEMENT"/>
+<Node Id="10010" Label="28: IFSTATEMENT"/>
+<Node Id="100100" Label="70: if"/>
+<Node Id="100101" Label="19: EXPR"/>
+<Node Id="1001010" Label="33: +"/>
+<Node Id="10010100" Label="17: 5"/>
+<Node Id="10010101" Label="17: 5"/>
+<Node Id="100102" Label="75: then"/>
+<Node Id="100103" Label="40: STATEMENT"/>
+<Node Id="1001030" Label="9: BLOCKSTATEMENT"/>
+<Node Id="10010300" Label="40: STATEMENT"/>
+<Node Id="100103000" Label="30: LOOPSTATEMENT"/>
+<Node Id="1001030000" Label="19: EXPR"/>
+<Node Id="1420365408" Label="55: =="/>
+<Node Id="1318752192" Label="17: 5"/>
+<Node Id="1318752193" Label="17: 5"/>
+<Node Id="1001030001" Label="40: STATEMENT"/>
+<Node Id="1420365418" Label="9: BLOCKSTATEMENT"/>
+<Node Id="1318752292" Label="40: STATEMENT"/>
+<Node Id="302621032" Label="11: BREAKSTATEMENT"/>
+<Node Id="-1268756976" Label="65: break"/>
+<Node Id="-1268756975" Label="21: ;"/>
+<Node Id="1318752293" Label="40: STATEMENT"/>
+<Node Id="302621042" Label="20: EXPSTATEMENT"/>
+<Node Id="-1268756876" Label="19: EXPR"/>
+<Node Id="197333128" Label="7: ="/>
+<Node Id="1973331280" Label="26: IDEN"/>
+<Node Id="-1741523680" Label="27: a"/>
+<Node Id="1973331281" Label="17: 5"/>
+<Node Id="-1268756875" Label="21: ;"/>
+<Node Id="1001030002" Label="69: end"/>
+</Nodes>
+<Links>
+<Link Source="10000" Target="100000"/>
+<Link Source="1000" Target="10000"/>
+<Link Source="1000100" Target="10001000"/>
+<Link Source="100010" Target="1000100"/>
+<Link Source="10001010" Target="100010100"/>
+<Link Source="1000101" Target="10001010"/>
+<Link Source="100010" Target="1000101"/>
+<Link Source="10001" Target="100010"/>
+<Link Source="1000" Target="10001"/>
+<Link Source="100" Target="1000"/>
+<Link Source="10010" Target="100100"/>
+<Link Source="1001010" Target="10010100"/>
+<Link Source="1001010" Target="10010101"/>
+<Link Source="100101" Target="1001010"/>
+<Link Source="10010" Target="100101"/>
+<Link Source="10010" Target="100102"/>
+<Link Source="1420365408" Target="1318752192"/>
+<Link Source="1420365408" Target="1318752193"/>
+<Link Source="1001030000" Target="1420365408"/>
+<Link Source="100103000" Target="1001030000"/>
+<Link Source="302621032" Target="-1268756976"/>
+<Link Source="302621032" Target="-1268756975"/>
+<Link Source="1318752292" Target="302621032"/>
+<Link Source="1420365418" Target="1318752292"/>
+<Link Source="1973331280" Target="-1741523680"/>
+<Link Source="197333128" Target="1973331280"/>
+<Link Source="197333128" Target="1973331281"/>
+<Link Source="-1268756876" Target="197333128"/>
+<Link Source="302621042" Target="-1268756876"/>
+<Link Source="302621042" Target="-1268756875"/>
+<Link Source="1318752293" Target="302621042"/>
+<Link Source="1420365418" Target="1318752293"/>
+<Link Source="1001030001" Target="1420365418"/>
+<Link Source="100103000" Target="1001030001"/>
+<Link Source="100103000" Target="1001030002"/>
+<Link Source="10010300" Target="100103000"/>
+<Link Source="1001030" Target="10010300"/>
+<Link Source="100103" Target="1001030"/>
+<Link Source="10010" Target="100103"/>
+<Link Source="1001" Target="10010"/>
+<Link Source="100" Target="1001"/>
+<Link Source="10" Target="100"/>
+<Link Source="1" Target="10"/>
+</Links>
 </DirectedGraph>
